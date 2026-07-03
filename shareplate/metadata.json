@@ -1,0 +1,6 @@
+{
+  "name": "SharePlate",
+  "description": "A hyperlocal, AI-powered food sharing and donation marketplace for communities, designed to reduce food waste and support neighbors.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
