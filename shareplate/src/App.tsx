@@ -1,11 +1,26 @@
-import React from 'react';
-import MarketplaceApp from './components/MarketplaceApp';
+import { useEffect } from "react";
+import { supabase } from "./lib/supabase";
 
 export default function App() {
+
+  useEffect(() => {
+
+    async function testConnection() {
+
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("*");
+
+      console.log("DATA:", data);
+      console.log("ERROR:", error);
+
+    }
+
+    testConnection();
+
+  }, []);
+
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans flex flex-col antialiased selection:bg-emerald-500/10 selection:text-emerald-800 p-2 sm:p-4 lg:p-6 h-screen overflow-hidden">
-      <MarketplaceApp />
-    </div>
+    <h1>SharePlate Connected Successfully 🚀</h1>
   );
 }
-
